@@ -58,7 +58,7 @@ nav ul{
     position: absolute;
     background-color: rgb(78, 198, 217);
     width: 60vh;
-    height: 50vh;
+    height: 60vh;
     /* z-index: -1; */
     visibility: hidden;
 }

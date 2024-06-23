@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login-signup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <ul
+          style="
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            align-items: center;
+          "
+        >
+          <li id="signups">signup</li>
+          <li id="logins">login</li>
+          <li id="logout" onclick="logout()">logout</li>
+        </ul>
+      </nav>
+
+      <div class="account">
+        <h1>account info</h1>
+        <div class="user"></div>
+        <div class="showhide" style="visibility: hidden">expense</div>
+      </div>
+
+      <div class="bottompart">
+        <div class="signin">
+          <div class="form">
+            <h2>login <span id="close" style="cursor: pointer">❌</span></h2>
+
+            <input type="email" id="email" placeholder="enter the email" />
+            <input
+              type="password"
+              id="password"
+              placeholder="enter the password"
+            />
+            <input type="button" onclick="login()" value="submit" />
+          </div>
+        </div>
+
+        <div class="signup">
+          <div class="form">
+            <h2>
+              create account<span id="close1" style="cursor: pointer">❌</span>
+            </h2>
+
+            <input type="email" id="emails" placeholder="enter the email" />
+            <input
+              type="password"
+              id="passwords"
+              placeholder="enter the password"
+            />
+            <input type="text" id="name" placeholder="enter the username" />
+            <input
+              type="tel"
+              id="mobilenumber"
+              placeholder="enter the mobile number"
+            />
+            <input type="button" onclick="signup()" value="submit" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBc8BlHXfeXYabIvB1fkmEvjIOx3fFdSyE",
+        authDomain: "signup-signin-764af.firebaseapp.com",
+        projectId: "signup-signin-764af",
+        storageBucket: "signup-signin-764af.appspot.com",
+        messagingSenderId: "126676257218",
+        appId: "1:126676257218:web:6e5d78d78fa356c0caae5b",
+        measurementId: "G-1YN83700ZF",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //   getAnalytics(app);
+    </script>
+    <script src="auth.js"></script>
+    <script src="firestoredb.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
